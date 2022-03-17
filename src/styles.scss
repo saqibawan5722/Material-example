@@ -1,0 +1,99 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$warn: mat.define-palette(mat.$red-palette);
+
+
+// Create the theme object
+$theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    warn: $warn,
+  )
+));
+
+$foreground : map-get($theme , foreground);
+$background : map-get($theme , background);
+
+// Include theme styles for core
+@include mat.all-component-themes($theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+//  use for dynamically change color, main file use for this
+.color1{
+  color: mat.get-color-from-palette($warn)
+}
+
+
+
+//  use for change background and foreground color dynamically use main file this process
+.box{
+  background: mat.get-color-from-palette($foreground ,  disabled-text);
+}
+
+.color{
+  color: mat.get-color-from-palette($background , card)
+}
+
+
+
+// use app-bar main file is use and create utilities classes
+.appbar{
+  background: mat.get-color-from-palette($background , app-bar)
+}
+
+.statusbar{
+  background: mat.get-color-from-palette($background ,  status-bar)
+}
+
+.hover{
+  background: mat.get-color-from-palette($background , hover)
+}
+
+.primary{
+  background: mat.get-color-from-palette($primary)
+}
+
+//  .5 ya opasity lay leay use hua .5 mean 50%
+.accent{
+  background: mat.get-color-from-palette($accent, .5)
+}
+
+.warn{
+  background: mat.get-color-from-palette($warn)
+}
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//  use for border
+.appbar1{
+  border: 5px solid mat.get-color-from-palette($foreground , divider);
+}
+
+
+//  use elevation , in simple word elevation is a shadow
+
+.appbar2{
+  background:  mat.get-color-from-palette($foreground , elevation);
+}

@@ -1,0 +1,85 @@
+<div class="container mt-5">
+    <div class="row">
+        <h1>Button Toggle</h1>
+        <mat-divider></mat-divider>
+
+        <!--  example one single toggle -->
+        <div class="col-6 mt-4">
+            <h3>Example 1: single button toggle</h3>
+            <mat-button-toggle #value  (change)="togglebutton(value)">{{value.checked? 'Active' : 'Inactive'}}</mat-button-toggle>
+            <br>
+             {{value.checked}}
+        </div>
+
+
+        <!-- example two toggle group -->
+        <div class="col-6 mt-4">
+            <h3>Example 2: button toggle group</h3>
+            <mat-button-toggle-group #group="matButtonToggleGroup">
+                <mat-button-toggle value="left">
+                    <mat-icon>format_align_left</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle  value="center">
+                    <mat-icon>format_align_center</mat-icon>
+                </mat-button-toggle>
+                <mat-button-toggle value="right">
+                    <mat-icon>format_align_right</mat-icon>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <br>
+            <p [style.text-align]="group.value">Lorem ipsum dolor sit amet consectetu, vitae quasi!</p>
+        </div>
+
+
+
+        <!-- In this example multiple selected are use as a variable -->
+        <div class="col-6 mt-4">
+            <h3>Example 3: multiple selected</h3>
+            <mat-button-toggle-group #group2="matButtonToggleGroup" multiple>
+                <mat-button-toggle value="Angular">
+                    Angular
+                </mat-button-toggle>
+                <mat-button-toggle  value="React">
+                    React
+                </mat-button-toggle>
+                <mat-button-toggle value="Vue">
+                    Vue
+                </mat-button-toggle>
+                <mat-button-toggle value="Java">
+                    Java
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            <br>
+            {{group2.value}}
+        </div>
+
+
+
+
+        <div class="col-6 mt-4">
+            <h3>Example 4: Example driven form</h3>
+            <section>
+                <h4>Button Toggle inside of a Template-driven form</h4>
+                <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+                  <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                  <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                  <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                </mat-button-toggle-group>
+                <p>Chosen value is {{fontStyle}}</p>
+            </section>
+        </div>
+
+        <div class="col-6 mt-4">
+            <h3>Example 5: Example Reactive form</h3>
+           <section>
+                <h4>Button Toggle inside of a Reactive form</h4>
+                <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style">
+                    <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                    <mat-button-toggle value="italic">Italic</mat-button-toggle>
+                    <mat-button-toggle value="underline">Underline</mat-button-toggle>
+                </mat-button-toggle-group>
+                <p>Chosen value is {{fontStyleControl.value}}</p>
+           </section>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.mat-card{
+    margin-bottom: 20px;
+}
+
+.example-header-image {
+    background-image: url('/assets/img/pic2.webp');
+    background-size: cover;
+  }
+
+.rating .mat-icon{
+    font-size: medium;
+}
+
+.rating .active{
+    color: yellow;
+    opacity: .6;
+}
+
+.rating .active1{
+    opacity: .5;
+}

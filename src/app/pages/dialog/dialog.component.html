@@ -1,0 +1,42 @@
+
+<!-- this is simple example of dialog -->
+<div class="container mt-4">
+    <h1>Dialog</h1>
+    <mat-divider></mat-divider>
+    <div class="row">
+
+        <!-- simple dialog example -->
+        <!-- <div class="col-4">
+            <mat-card class="mt-4">
+                <p>Simple Dialog Example</p>
+                <button mat-button (click)="openDialog()">Open dialog</button>
+            </mat-card>  
+        </div> -->
+
+
+        
+        <!-- example dialog with data -->
+        <div class="col-4">
+            <mat-card class="mt-4">
+                <ol>
+                    <li>
+                      <mat-form-field appearance="fill">
+                        <mat-label>What's your name?</mat-label>
+                        <input matInput [(ngModel)]="name">
+                      </mat-form-field>
+                    </li>
+
+                    <li>
+                      <button mat-raised-button (click)="openDialog1()">Pick one</button>
+                    </li>
+                    
+                    <li *ngIf="animal">
+                      You chose: <i>{{animal}}</i>
+                    </li>
+                  </ol>
+            </mat-card>
+        </div>
+        
+
+    </div>  
+</div>

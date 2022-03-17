@@ -1,0 +1,58 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+   .error{
+       color: aqua;
+   }
+
+
+//  .ng-invalid{
+//     color : pink;
+//  }
+
+  .example1 {
+      caret-color: blue;
+    }
+
+  input.my.ng-invalid{
+      color: yellow;
+    }
+
+
+    // USE FOR BORDER
+
+  // mat-input-focused color // use for border
+ ::ng-deep .my1.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline {
+        color: skyblue!important;}
+
+
+//  agr email wrong lhki to dobara focus krny par green show hu ge
+ ::ng-deep .my1.mat-form-field-appearance-outline.mat-focused.mat-form-field-invalid.mat-form-field-invalid
+           .mat-form-field-outline-thick{
+            color: green!important;}
+
+
+//  this is use for error and focus
+ ::ng-deep .my1.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+            color:  yellow!important;}
+
+
+
+// agr email theak nahi , error ahaa rahaa hua to label color change hu jeay ga hu jeay ga
+//   ::ng-deep .mat-form-field .mat-focused .mat-form-field-label {
+//                  color: red!important;}
+
+
+ // agr email theak nahi , error ahaa rahaa hua to label color change hu jeay ga hu jeay ga
+  ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+                color: pink!important;}
+
+
+    

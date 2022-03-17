@@ -1,0 +1,79 @@
+<div class="container mt-4">
+    <h1>Input Field</h1>
+    <mat-divider></mat-divider>
+    <div class="row">
+         <!--Card Example 1 Basic Card -->
+        <div class="col-4 mt-4">
+            <form class="example-form">
+
+                <mat-form-field class="example-full-width my1" appearance="outline">
+                    <mat-label>Email</mat-label>
+                       <input class="my" type="email " matInput [formControl]="emailFormControl" 
+                       placeholder="Ex. pat@example.com" style="text-align: left"> 
+
+                    <mat-error class="error" *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Please enter a valid email address
+                   </mat-error>
+
+                   <mat-error class="error" *ngIf="emailFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                   </mat-error> 
+                </mat-form-field> 
+
+
+                <mat-form-field class="example-full-width mt-4" mt-4 appearance="outline">
+                    <mat-label class="error">Name</mat-label>
+                    <input type="text" matInput [formControl]="nameFormControl" 
+                    placeholder="Ex. pat@example.com" style="text-align: left"> 
+
+                     
+                   <mat-error class="error" *ngIf="nameFormControl.hasError('email') && !nameFormControl.hasError('required')">
+                      Please enter a valid email address
+                   </mat-error>
+
+                   <mat-error class="error" *ngIf="nameFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                   </mat-error>
+                </mat-form-field>       
+           </form>  
+
+
+
+           <!-- <form [formGroup]="form">
+            <mat-form-field class="full-width">
+              <input matInput id="myInput" formControlName="myInput" placeholder="Focused Input">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="full-width">
+                <input matInput formControlName="myInput" placeholder="Focused Input">
+              </mat-form-field>
+              <br>
+            <button mat-raised-button color="primary" (click)="focusMyInput()">Focus</button>
+          </form> -->
+
+
+
+
+          <!-- <div class="content" role="main">
+            <form class="example-form">
+                <mat-form-field class="example-full-width" >
+                   <textarea #myinput matInput placeholder="We'll autofocus this element."></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" >
+                   <textarea  matInput placeholder="We'll autofocus this element."></textarea>
+                </mat-form-field>
+
+               <mat-form-field class="example-full-width" >
+                  <textarea  matInput placeholder="We'll autofocus this element."></textarea>
+                </mat-form-field>
+           </form></div> -->
+
+
+       </div>       
+    </div>           
+</div>
+             
+
+
+

@@ -1,0 +1,107 @@
+
+<div class="container mt-5"> 
+    <div class="d-flex"  style="justify-content: space-between;" >
+        <h1 class="color1">Components</h1>
+        <div>
+           <button mat-raised-button color="primary"
+               matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+               Action
+          </button>
+       </div>
+    </div>
+
+      <mat-divider></mat-divider>
+      
+    <div class="content mt-5">
+        <div class="row">
+            <div class="col-2  mb-4" >
+                <mat-card class="appbar appbar1">
+                    <mat-card-content>
+                        <button mat-icon-button>
+                            <mat-icon>smart_button</mat-icon>
+                        </button>
+                        longText
+                   </mat-card-content>     
+                </mat-card>
+            </div>
+                
+             <!--  in this card we can also use elevation , elevation is also called box-shadow,
+             and in elevation we can use (1 to 24) numbers-->
+            <div class="col-2  mb-4">
+                <mat-card class="statusbar mat-elevation-z20">
+                    <mat-card-content>
+                        <mat-icon>smart_button</mat-icon>
+                        longText
+                    </mat-card-content>     
+                </mat-card>
+            </div>
+                   
+
+            <div class="col-2 mb-4">
+                 <mat-card class="hover">
+                    <mat-card-content>
+                        <mat-icon>smart_button</mat-icon>
+                        longText
+                    </mat-card-content>     
+                </mat-card>
+            </div>
+                   
+
+            <div class="col-2 mb-4">
+                <mat-card class="primary">
+                    <mat-card-content>
+                        <mat-icon>smart_button</mat-icon>
+                        longText
+                    </mat-card-content>     
+                </mat-card>
+            </div>
+                   
+
+            <div class="col-2 mb-4">
+                <mat-card class="accent">
+                    <mat-card-content>
+                        <mat-icon>smart_button</mat-icon>
+                        longText
+                    </mat-card-content>     
+                </mat-card>
+            </div>   
+
+
+            <div class="col-2 mb-4">
+                <mat-card class="warn" >
+                    <mat-card-content>
+                        <mat-icon>smart_button</mat-icon>
+                        longText
+                    </mat-card-content>     
+                </mat-card>
+            </div>   
+
+            <!--  In this card we can use ripple , ripple agr center say lana 
+                hu to (matRippleCentered) use karty han -->
+            <div>
+                <div class="col-2 mb-4">
+                    <mat-card matRipple [matRippleCentered]="true" [matRippleColor]="'yellow'" [matRippleTrigger]="trigger">
+                        <mat-card-content>
+                            <mat-icon>smart_button</mat-icon>
+                            longText
+                        </mat-card-content>     
+                    </mat-card>
+                </div> 
+                 <!-- button par ham trigger use kar sakty han -->
+                <div class="col-2 mb-4"  #trigger>
+                    <button mat-stroked-button color="accent">Accent</button> 
+                </div> 
+    
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="box color">
+        saqib
+    </div>
+</div>
+
